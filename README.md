@@ -90,9 +90,9 @@
 	
 		```json
 		{
-			"old_trade_pwd":"xxx",
-			"trade_pwd":"xxx",
-			"trade_pwd_repeat":"xxx"
+		"old_trade_pwd":"xxx",
+		"trade_pwd":"xxx",
+		"trade_pwd_repeat":"xxx"
 		}
 		```
 
@@ -112,9 +112,9 @@
 	
 		```json
 		{
-			"old_pwd":"xxx",
-			"pwd":"xxx",
-			"pwd_repeat":"xxx"
+		"old_pwd":"xxx",
+		"pwd":"xxx",
+		"pwd_repeat":"xxx"
 		}
 		```
 
@@ -134,18 +134,19 @@
 
 	```json
   {
-      "code":0,
-      "data":{
-          "all_cnt":1,
-          "list":[
-              {
-               	"title":"system infoxxxx",
-                  "content": "abcdefg",
-                  "category": 0, // 0-system info ,1-transfer info,2- withdrawl info
-                  "create_at": 12345
-              }
-          ]
-      }
+  "code":0,
+  "data":
+  		{
+	      "all_cnt":1,
+	      "list":[
+	          {
+	           	"title":"system infoxxxx",
+	              "content": "abcdefg",
+	              "category": 0, // 0-system info ,1-transfer info,2- withdrawl info
+	              "create_at": 12345
+	          }
+	      ]
+	  }
   }
   ```
   
@@ -157,13 +158,13 @@
 
 	```json
   {
-      "code":0
-      "data":{
-          "list":[
-  			{"name":"usdt", "rate":1.222},
-  			{"name":"cny", "rate":1.322},
-          ]
-  		}
+  "code":0,
+  "data":{
+      "list":[
+		{"name":"usdt", "rate":1.222},
+		{"name":"cny", "rate":1.322},
+      ]
+	}
   }
   ```
 
@@ -175,13 +176,12 @@
 
 	```json
 	{
-	   "code":0, 
-	   "data":
-	       	{
-	       		"name": "Fcoin", 
-	       		"price": 0.00001
-	       	}
-	  }
+   "code":0, 
+   "data":{
+   		"name": "Fcoin", 
+   		"price": 0.00001
+   	}
+  }
   	```
 
 
