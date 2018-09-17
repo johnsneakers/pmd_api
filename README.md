@@ -7,8 +7,8 @@
   - api error: {"code":-1}  (code<0 means error)
 - Description
   - In order to distinguish between the app and the desktop, it is determined by the second parameter of the url, such as: /api/desk/login, /api/mobile/login. Representing the desktop and mobile versions respectively.
-  - all the api request header need: version paremete
-  - desk app need disk_id parameter
+  - all the api request require  "version" paremeter in header.
+  - desk app request require "disk_id" parameter in header.
 
 
 
