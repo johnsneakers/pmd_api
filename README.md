@@ -12,7 +12,17 @@
 
 
 
-#### Register
+#### 1、Send SMS Code
+
+- GET /sendVerify?email=xxx@123.com
+
+- Response: 
+
+	```json
+	{"code":0}
+	```
+ 
+#### 2、Register
 
 > password require 6-15 letter and number
 
@@ -45,40 +55,206 @@
   // machine not found
    {"code":-18}
   ```
-
-  ​
-
-  ​
-
-#### Send SMS Code
-
-- GET /sendVerify?email=xxx@123.com
-- Response: {"code":0}
-
-
-
-#### Login
+  
+#### 3、Login
 
 - POST /login
 
-- Body  {"email": "xxx@123.com", "pwd":"12345"}
+- Body  
+
+	```json
+		{
+			"email": "xxx@123.com", 
+			"pwd":"12345"
+		}
+	```
 
 - Response
 
   ```json
   {
-      "x-token":"aaaaaaaa",
-      "uid":99999,
-      "isNew":0
+  	"code":0,
+  	"data":{
+      	"x-token":"aaaaaaaa",
+      	"uid":99999,
+      	"isNew":0
+      }
   }
   ```
 
-  ​
+#### 4、Modify payment password
+
+- GET /reset/pin
+	
+	- body
+	
+		```json
+			{
+				"old_trade_pwd":"xxx",
+				"trade_pwd":"xxx",
+				"trade_pwd_repeat":"xxx"
+			}
+		```
+
+	- response
+		
+		```json
+			{
+	   		"code":0
+	  		}
+		```
+
+#### 5、Modify the login password
+
+- GET /reset/passwrd
+	
+	- body
+	
+		```json
+			{
+				"old_pwd":"xxx",
+				"pwd":"xxx",
+				"pwd_repeat":"xxx"
+			}
+		```
+
+	- response
+		
+		```json
+			{
+	   		"code":0
+	  		}
+		```
+		
+#### 6、Get a list of messages
+
+- GET /msg/list?page=1
+
+- response  ​
+
+	```json
+  {
+      "code":0,
+      "data":{
+          "all_cnt":1,
+          "list":[
+              {
+               	"title":"system infoxxxx",
+                  "content": "abcdefg",
+                  "category": 0, // 0-system info ,1-transfer info,2- withdrawl info
+                  "create_at": 12345
+              }
+          ]
+      }
+  }
+  ```
+  
+#### 7、Get exchange rate information
+
+- GET /exchange/rate
+
+- response
+
+	```json
+	  {
+	      "code":0
+	      "data":{
+	          "list":[
+	  			{"name":"usdt", "rate":1.222},
+	  			{"name":"cny", "rate":1.322},
+	          ]
+	  		}
+	  }
+  ```
+
+### 8、Get the exchange price
+
+- GET /exchange/info
+
+- response
+
+	```
+	{
+	   "code":0, 
+	   "data":
+	       	{
+	       		"name": "Fcoin", 
+	       		"price": 0.00001
+	       	}
+	  }
+  	```
 
 
 
-  ​
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Home overview information
+
+- GET /overview
+
+	- response
+	
+		* desk
+		
+		```json
+		{
+	   "code":0, 
+	   "data":
+	      {
+	          "pmd_all": 20180107,  // pmd
+	          "other_incoming": 25, // otherIncoming
+	          "mining_profit": 75,
+	          "exchangeIndex":[
+	              {
+	                  "name":"Fcoin",
+	                  "price":"99.05"
+	              }
+	          ]
+	      }
+	  }
+		```
+
+		* mobile 
+		 
+		```json
+		{
+	   "code":0, 
+	   "data":
+	      {
+	          "pmd_all": 20180107,  // pmd
+	          "other_incoming": 25, // otherIncoming
+	          "mining_profit": 75,
+	          "exchangeIndex":[
+	              {
+	                  "name":"Fcoin",
+	                  "price":"99.05"
+	              }
+	          ],
+	          "machine_list":[
+	          	{
+	          		"wallet_addr":"xxx",
+						"balance":0.00,
+						"machine_nick":"xxx",
+						"status":0/1
+	          	}
+	          ]
+	      }
+	  }
+		``` 
+		
 
 
 
