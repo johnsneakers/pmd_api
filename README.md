@@ -7,16 +7,16 @@
   - api error: {"code":-1}  (code<0 means error)
 - Description
   - In order to distinguish between the app and the desktop, it is determined by the second parameter of the url, such as: /api/desk/login, /api/mobile/login. Representing the desktop and mobile versions respectively.
+  - all the api request header need: version paremete
+  - desk app need disk_id parameter
 
 
 
-##### Register
+#### Register
 
 > password require 6-15 letter and number
 
 - POST /register
-
-- desk version need disk_id
 
 - Body
 
@@ -50,19 +50,16 @@
 
   ​
 
-##### Send SMS Code
+#### Send SMS Code
 
 - GET /sendVerify?email=xxx@123.com
-- desk version need disk_id
 - Response: {"code":0}
 
 
 
-##### Login
+#### Login
 
 - POST /login
-
-- desk version need disk_id
 
 - Body  {"email": "xxx@123.com", "pwd":"12345"}
 
