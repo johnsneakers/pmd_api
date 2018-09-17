@@ -63,10 +63,10 @@
 - Body  
 
 	```json
-		{
-			"email": "xxx@123.com", 
-			"pwd":"12345"
-		}
+	{
+		"email": "xxx@123.com", 
+		"pwd":"12345"
+	}
 	```
 
 - Response
@@ -89,19 +89,19 @@
 	- body
 	
 		```json
-			{
-				"old_trade_pwd":"xxx",
-				"trade_pwd":"xxx",
-				"trade_pwd_repeat":"xxx"
-			}
+		{
+			"old_trade_pwd":"xxx",
+			"trade_pwd":"xxx",
+			"trade_pwd_repeat":"xxx"
+		}
 		```
 
 	- response
 		
 		```json
-			{
-	   		"code":0
-	  		}
+		{
+   			"code":0
+  		}
 		```
 
 #### 5、Modify the login password
@@ -111,19 +111,19 @@
 	- body
 	
 		```json
-			{
-				"old_pwd":"xxx",
-				"pwd":"xxx",
-				"pwd_repeat":"xxx"
-			}
+		{
+			"old_pwd":"xxx",
+			"pwd":"xxx",
+			"pwd_repeat":"xxx"
+		}
 		```
 
 	- response
 		
 		```json
-			{
-	   		"code":0
-	  		}
+		{
+   			"code":0
+  		}
 		```
 		
 #### 6、Get a list of messages
@@ -156,24 +156,24 @@
 - response
 
 	```json
-	  {
-	      "code":0
-	      "data":{
-	          "list":[
-	  			{"name":"usdt", "rate":1.222},
-	  			{"name":"cny", "rate":1.322},
-	          ]
-	  		}
-	  }
+  {
+      "code":0
+      "data":{
+          "list":[
+  			{"name":"usdt", "rate":1.222},
+  			{"name":"cny", "rate":1.322},
+          ]
+  		}
+  }
   ```
 
-### 8、Get the exchange price
+#### 8、Get the exchange price
 
 - GET /exchange/info
 
 - response
 
-	```
+	```json
 	{
 	   "code":0, 
 	   "data":
