@@ -86,45 +86,45 @@
 
 - GET /reset/pin
 	
-	- body
+- body
 	
-		```json
-		{
-		"old_trade_pwd":"xxx",
-		"trade_pwd":"xxx",
-		"trade_pwd_repeat":"xxx"
-		}
-		```
+	```json
+	{
+	"old_trade_pwd":"xxx",
+	"trade_pwd":"xxx",
+	"trade_pwd_repeat":"xxx"
+	}
+	```
 
-	- response
-		
-		```json
-		{
-   			"code":0
-  		}
-		```
+- response
+	
+	```json
+	{
+		"code":0
+	}
+	```
 
 #### 5、Modify the login password
 
 - GET /reset/passwrd
 	
-	- body
+- body
 	
-		```json
-		{
-		"old_pwd":"xxx",
-		"pwd":"xxx",
-		"pwd_repeat":"xxx"
-		}
-		```
+	```json
+	{
+	"old_pwd":"xxx",
+	"pwd":"xxx",
+	"pwd_repeat":"xxx"
+	}
+	```
 
-	- response
-		
-		```json
-		{
-   			"code":0
-  		}
-		```
+- response
+	
+	```json
+	{
+		"code":0
+	}
+	```
 		
 #### 6、Get a list of messages
 
