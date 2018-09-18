@@ -150,6 +150,36 @@
   }
   ```
   
+#### 6、Get a list of messages (by category, no paging)
+
+- GET /msgs/:type
+
+- param
+	- :type
+		* 0 - system notification
+		* 1 = transfer notification 
+		* 2 - coin notification
+
+- response  ​
+
+	```json
+  {
+  "code":0,
+  "data":
+  		{
+	      "all_cnt":1,
+	      "list":[
+	          {
+	           	"title":"system infoxxxx",
+	              "content": "abcdefg",
+	              "category": 0, // 0-system info ,1-transfer info,2- withdrawl info
+	              "create_at": 12345
+	          }
+	      ]
+	  }
+  }
+  ```
+  
 #### 7、Get exchange rate information
 
 - GET /exchange/rate
@@ -184,24 +214,7 @@
   }
   	```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Home overview information
+#### 9、Home overview information
 
 - GET /overview
 
@@ -254,6 +267,97 @@
 	      }
 	  }
 		``` 
+
+
+#### 10、machine detail
+
+- GET /machine/detail/:machine_addr
+
+- Response
+
+	```json
+	{
+		"code":0,
+		"data":{
+			"status":1,
+			"margin":"xxx",
+			"elapsed:"xxx"
+		}
+	}
+	```	
+
+#### 11、Get my /balance
+
+- GET /balance
+
+- response
+
+	```json
+	{
+	"code":0,
+	"data":{
+		"balance_by_miner":0.00,
+		"balance_by_other":0.00
+		}
+	}
+	```
+
+#### 12、Get historical withdrawal address
+
+- GET /withdraw/history/addrs
+
+- response
+	
+	```json
+	{
+		"code":0,
+		"data":{
+			"list":[
+				{"addr":"xxx"},
+				{"addr":"xxx"}
+			]
+	}
+	```
+
+#### 13、outer transaction
+
+- POST /transaction/outer
+
+- Body
+
+	```json
+	{
+	"to_addr":"xxx",
+	"amount":xxxx,
+	"trade_pwd":"xxx"
+	}
+	```
+
+- Reponse
+	
+	```json
+	{
+		"code":0
+	}
+	```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 
 
