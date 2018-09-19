@@ -271,7 +271,7 @@
 
 #### 10、machine detail
 
-- GET /machine/detail/:machine_addr
+- GET /machine/detail/:wallet_addr
 
 - Response
 
