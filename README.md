@@ -106,7 +106,7 @@
 
 #### 5、Modify the login password
 
-- GET /reset/passwrd
+- GET /reset/password
 	
 - body
 	
