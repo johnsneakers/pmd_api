@@ -340,10 +340,88 @@
 		"code":0
 	}
 	```
+## 2018-10-08
 
+#### 1、Scan QR code
 
+- POST /mobile/qrcode
 
+- Body
 
+	```json
+	{
+   	"mac_info":"mac:A1-20180917\rdisk:A1-20180917"
+	}
+	```
+
+- Reponse
+	
+	```json
+	{
+    "code": "0",
+    "data": {
+        "wallet_addr": "0x863D0C461818D74D7012443E362DC21B7E49505C"
+    },
+    "msg": ""
+	}
+	```
+#### 2、Binding mining machine
+
+- GET /bind/:wallet_addr
+
+- Reponse
+	
+	```json
+	{
+    "code": "0"
+    }
+	```
+### 3、set machine alias
+
+- POST /mobile/machine/set
+
+- Body
+
+	```json
+	{
+   "wallet_addr":"0x863D0C461818D74D7012443E362DC21B7E49505C",
+   "machine_name":"haha-no.1"
+	}
+	```
+
+- Reponse
+	
+	```json
+	{
+		"code":0
+	}
+	```
+
+### 4、扫描二维码，桌面版自动登录
+> 1.请使用长轮询访问此接口
+
+> 2.桌面版打开二维码，即访问此接口，
+
+> 3.当手机扫描成功，并完成绑定时，才会有返回，
+
+> 4.当玩家绑定机器后，通过disk_id查询用户信息，然后再完成自动登录，并返回token
+
+- POST /desk/autologin
+
+- Body
+
+- Response
+	```json
+		{
+		    "code": "0",
+		    "data": {
+		        "uid": 10009,
+		        "isNew": 0,
+		        "token": "0f04b388129f74b12dbbadc7f2c2bce6"
+		    },
+		    "msg": ""
+		}
+	```
 
 
 
