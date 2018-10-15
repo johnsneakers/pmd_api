@@ -423,8 +423,25 @@
 		    "msg": ""
 		}
 	```
+## 2018-10-15
 
+#### 1、mobile unbind my machine
 
+- GET /mobile/unbind/:wallet_addr
+
+- Reponse
+	
+	```json
+	{
+    "code": "0"
+    }
+	```
+- Error
+	```
+		-15 : find machine error
+		-10202 : Machine has balance
+	
+	```
 
 
 
