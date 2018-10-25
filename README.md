@@ -443,6 +443,49 @@
 	
 	```
 
+## 2018-10-25
+
+#### 1、update mobile bonus/info api
+
+- GET /mobile/bonus/info/:wallet_addr?q=xxx
+
+-Param:
+   q : 0/1/2/3
+
+- Reponse
+	
+	```json
+	{
+	    "code": "0",
+	    "data": {
+		"q": 0,
+		"all_bonus": 0,
+		"chart": [
+		    {
+			"bonus": 0,
+			"date": "2018-10-23",
+			"time": 1540224000
+		    },
+		    {
+			"bonus": 0,
+			"date": "2018-10-24",
+			"time": 1540310400
+		    },
+		    {
+			"bonus": 0,
+			"date": "2018-10-25",
+			"time": 1540396800
+		    }
+		]
+	    },
+	    "msg": ""
+	}
+	```
+- Error
+	```
+		-18 : not found machine  or  machine is not mine
+	
+	```
 
 
 
