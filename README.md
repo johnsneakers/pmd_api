@@ -449,7 +449,7 @@
 
 - GET /mobile/bonus/info/:wallet_addr?q=xxx
 
--Param:
+- Param:
    q : 0/1/2/3
 
 - Reponse
