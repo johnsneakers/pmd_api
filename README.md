@@ -460,6 +460,7 @@
 	    "data": {
 		"q": 0,
 		"all_bonus": 0,
+		"duration":1, //duration hour
 		"chart": [
 		    {
 			"bonus": 0,
